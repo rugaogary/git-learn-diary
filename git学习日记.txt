@@ -1,0 +1,111 @@
+1.怎样设置使用npp的编辑器。
+   a) 在git中进行配置：
+      $ git config --global core.editor "'d:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+	  或者另一个方法：	  C:\Users\rugaogary\.gitconfig中添加
+	  [core]
+	  editor = 'd:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
+   b) 在D:\Program Files\Git\etc\bash.bashrc中添加：	  
+	  alias npp="'d:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+	  
+2.查询git版本。
+   git version
+   
+3.设置用户名和邮箱地址。
+   git config --global user.name "rugaogary"
+   git config --global user.email "rugaogary@163.com"
+   
+4.提高命令输出的可读性。
+   git config --global color.ui auto    
+   
+5.查询git设置。
+   git config --list
+
+6.设置SSH Key。
+   ssh-keygen -t rsa -C "rugaogary@163.com"
+   
+7.认证SSH Key。
+   ssh -T git@github.com  
+   
+8.克隆已有仓库。
+   git clone git@github.com:rugaogary/Hello-World.git
+   
+9.查看当前目录。
+   pwd
+   
+10.新建目录。
+   mkdir <muluming>
+
+11.初始化仓库。
+   git init
+
+12.建立新文件。
+   touch <filename>
+
+13.加入暂存区。
+   git add <filename>
+
+14.保存到本地仓库。
+   git commit -m "message"
+
+15.查看提交到本地仓库的历史(以当前状态为终点)。
+   git log 
+   git log --pretty=short
+   git log --pretty=oneline
+   git log <filename>
+   
+16.查看工作树和暂存区的差别。
+   git diff   
+   
+17.查看工作树和最新提交的差别。
+   git diff HEAD      
+   
+18.显示分支一览表。
+   git branch         
+   
+19.创建并切换到该分支。
+   git checkout -b <branchname>            
+   
+20.创建分支。
+   git branch <branchname>       
+   
+21.切换到分支。
+   git checkout <branchname>          
+   
+22.合并分支。
+   git merge --no-ff <branchname>             
+   
+23.以图表的形式查看(以当前状态为终点)。
+   git log --graph             
+   
+24.查看当前仓库的历史日志。
+   git reflog   
+
+25.设置远程仓库地址。
+   git remote add origin git@github.com:rugaogary/git-tutorial.git   
+   
+26.推送master分支到远程仓库。
+   git push -u origin master       
+   
+27.获取远程仓库。
+   git clone git@github.com:rugaogary/git-tutorial.git          
+   
+28.获取远程仓库的feature-D分支。
+   git checkout -b feature-D origin/feature-D         
+      
+29.推送当前分支到远程仓库。
+   git push        
+   
+30.获取最新feature-D分支。
+   git pull origin feature-D  
+
+31.git输出中文文件名
+   git config --global core.quotepath false
+   
+32.提交说明支持中文   
+   git config --global i18n.logOutputEncoding gbk
+   git config --global i18n.commitEncoding gbk
+
+
+     
+   
+   
